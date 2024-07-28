@@ -211,6 +211,10 @@ body {
     box-sizing: border-box;
   }
 
+  input[type="color"] {
+    height: 3em;
+  }
+  
   /* POPUP */
   .popup-container h1 {
     font-size: 24px;
