@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="tagoozenOptions">Tagoozen Options</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <h1 data-i18n="title">Tagoozen Options</h1>
+  <div id="language">
+    <label for="languageSelector" data-i18n="language">Language:</label>
+    <select id="languageSelector">
+      <option value="en">English</option>
+      <option value="ja">日本語</option>
+    </select>
+  </div>
+  <div id="tableContainer">
+    <button id="addTagBtn" data-i18n="addTag">Add New Tag</button>
+    <table id="tagsTable">
+      <thead>
+        <tr>
+          <th data-i18n="tagName">Text</th>
+          <th data-i18n="shape">Shape</th>
+          <th data-i18n="position">Position</th>
+          <th data-i18n="backgroundColor">Background Color</th>
+          <th data-i18n="textColor">Text Color</th>
+          <th data-i18n="matchType">Match Type</th>
+          <th data-i18n="domainValue">Domain Value</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- jsで表示する-->
+      </tbody>
+    </table>  
+  </div>
+  
+  <!-- 新規フォーム -->
+  <div id="tagForm" style="display: none;">
+    <div class="form">
+      <h2 data-i18n="addTag">Add New Tag</h2>
+      <form id="newTagForm">
+        <div>
+          <label for="tagName" data-i18n="tagName">Text:</label>
+          <input type="text" id="tagName" required>
+        </div>
+  
+        <div>
+          <label for="shape" data-i18n="shape">Shape:</label>
+          <select id="shape">
+            <option value="triangle" data-i18n="triangle">Triangle</option>
+            <option value="ribbon" data-i18n="ribbon">Ribbon</option>
+            <option value="rectangle" data-i18n="rectangle">Rectangle</option>
+            <option value="watermark" data-i18n="watermark">Water Mark</option>
+          </select>
+        </div>
+  
+        <div id="positionContainer">
+          <label for="position" data-i18n="position">Position:</label>
+          <select id="position" name="position">
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+          </select><br>
+        </div>
+  
+        <div id="backgroundColorContainer">
+          <label for="backgroundColor" data-i18n="backgroundColor">Background Color:</label>
+          <input type="color" id="backgroundColor" name="backgroundColor" value="#ff8000"><br>
+        </div>
+  
+        <div>
+          <label for="textColor" data-i18n="textColor">Text Color:</label>
+          <input type="color" id="textColor" value="#FFFFFF">
+        </div>
+  
+        <div>
+          <label for="matchType" data-i18n="matchType">Match Type:</label>
+          <select id="matchType">
+            <option value="regex" value="regex">Regex</option>
+            <option value="prefix" value="prefix">Prefix</option>
+            <option value="suffix" value="suffix">Suffix</option>
+            <option value="contains" value="contains">Contains</option>
+          </select>
+        </div>
+  
+        <div>
+          <label for="domainValue" data-i18n="domainValue">Domain Value:</label>
+          <input type="text" id="domainValue" required>
+        </div>
+  
+        <div>
+          <button type="submit" data-i18n="save">Save</button>
+          <button type="button" id="cancelBtn"data-i18n="cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 編集フォーム -->
+  <div class="form" id="editTagForm" style="display: none;">
+    <div class="form">
+      <h2 data-i18n="edit">Edit Tag</h2>
+      <form id="editTagFormElement">
+        <div>
+          <label for="editTagName" data-i18n="tagName">Text:</label>
+          <input type="text" id="editTagName" name="tagName"><br><br>
+        </div>
+        <div>
+          <label for="editShape" data-i18n="shape">Shape:</label>
+          <select id="editShape" name="shape">
+            <option value="triangle" data-i18n="triangle">Triangle</option>
+            <option value="ribbon" data-i18n="ribbon">Ribbon</option>
+            <option value="rectangle" data-i18n="rectangle">Rectangle</option>
+            <option value="watermark" data-i18n="watermark">Water Mark</option>
+          </select>
+        </div>
+
+        <div id="positionContainer">
+          <label for="editPosition" data-i18n="position">Position:</label>
+          <select id="editPosition" name="position">
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+          </select>
+        </div>
+
+        <div id="editBackgroundColorContainer">
+          <label for="editBackgroundColor" data-i18n="backgroundColor">Background Color:</label>
+          <input type="color" id="editBackgroundColor" name="backgroundColor">
+        </div>
+
+        <div>
+          <label for="editTextColor" data-i18n="textColor">Text Color:</label>
+          <input type="color" id="editTextColor" name="textColor">
+        </div>
+        
+        <div>
+          <label for="editMatchType" data-i18n="matchType">Match Type:</label>
+          <select id="editMatchType" name="matchType">
+            <option value="regex" value="regex">Regex</option>
+            <option value="prefix" value="prefix">Prefix</option>
+            <option value="suffix" value="suffix">Suffix</option>
+            <option value="contains" value="contains">Contains</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="editDomainValue" data-i18n="domainValue">Domain Value:</label>
+          <input type="text" id="editDomainValue" name="domainValue">
+        </div>
+
+        <div>
+          <button type="button" id="saveEditTagBtn" data-i18n="save">Save</button>
+          <button type="button" id="cancelEditTagBtn" data-i18n="cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+    
+  </div>
+
+  <script src="src/options.js"></script>
+</body>
+</html>

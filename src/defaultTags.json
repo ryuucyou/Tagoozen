@@ -1,0 +1,38 @@
+[
+    {
+        "backgroundColor": "#00a300",
+        "textColor": "#FFFFFF",
+        "tagName": "Dev 🤣",
+        "position": "left",
+        "matchType": "regex",
+        "shape": "triangle",
+        "domainValue": "(localhost)|(127.0.0.1).*"
+    },
+    {
+        "backgroundColor": "#ffff00",
+        "textColor": "#666666",
+        "tagName": "Staging 👀",
+        "position": "left",
+        "matchType": "regex",
+        "shape": "triangle",
+        "domainValue": "(st\\.)|(staging\\.)"
+    },
+    {
+        "backgroundColor": "#ff8000",
+        "textColor": "#FFFFFF",
+        "tagName": "Preview 🚗",
+        "position": "left",
+        "matchType": "regex",
+        "shape": "ribbon",
+        "domainValue": "(pre\\.)|(preview)"
+    },
+    {
+        "backgroundColor": "#ff6666",
+        "textColor": "#FFFFFF",
+        "tagName": "Production ⚠️",
+        "position": "left",
+        "matchType": "suffix",
+        "shape": "ribbon",
+        "domainValue": ".srv"
+    }
+]
