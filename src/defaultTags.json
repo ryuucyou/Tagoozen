@@ -2,16 +2,16 @@
     {
         "backgroundColor": "#00a300",
         "textColor": "#FFFFFF",
-        "tagName": "Dev 🤣",
+        "tagName": "Develop 😎",
         "position": "left",
-        "matchType": "regex",
+        "matchType": "contains",
         "shape": "triangle",
-        "domainValue": "(localhost)|(127.0.0.1).*"
+        "domainValue": "dev"
     },
     {
         "backgroundColor": "#ffff00",
         "textColor": "#666666",
-        "tagName": "Staging 👀",
+        "tagName": "Staging",
         "position": "left",
         "matchType": "regex",
         "shape": "triangle",
@@ -20,19 +20,19 @@
     {
         "backgroundColor": "#ff8000",
         "textColor": "#FFFFFF",
-        "tagName": "Preview 🚗",
+        "tagName": "Preview",
         "position": "left",
         "matchType": "regex",
-        "shape": "ribbon",
-        "domainValue": "(pre\\.)|(preview)"
+        "shape": "rectangle",
+        "domainValue": "(localhost)|(127.0.0.1).*"
     },
     {
         "backgroundColor": "#ff6666",
-        "textColor": "#FFFFFF",
-        "tagName": "Production ⚠️",
+        "textColor": "#ff6666",
+        "tagName": "本番環境🚨",
         "position": "left",
-        "matchType": "suffix",
-        "shape": "ribbon",
+        "matchType": "contains",
+        "shape": "watermark",
         "domainValue": ".srv"
     }
 ]

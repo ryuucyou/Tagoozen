@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     document.getElementById('languageSelector');
   
-    let language = 'ja'; // Default language
+    let language = 'en'; // Default language
   
     function loadLanguage(language) {
       fetch(chrome.runtime.getURL(`src/${language}.json`))
@@ -95,7 +95,19 @@ document.addEventListener('DOMContentLoaded', () => {
   
     function loadTags() {
       chrome.storage.local.get({ tags: [] }, (result) => {
-        displayTags(result.tags || []);
+        const tags = result.tags;
+        if (tags.length === 0) {
+          fetch(chrome.runtime.getURL('src/defaultTags.json'))
+            .then(response => response.json())
+            .then(defaultTags => {
+              chrome.storage.local.set({ tags: defaultTags }, () => {
+                displayTags(defaultTags);
+              });
+            })
+            .catch(error => console.error('Error loading default tags:', error));
+        } else {
+          displayTags(tags);
+        }
       });
     }
   
@@ -115,8 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <td>${tag.matchType}</td>
           <td>${tag.domainValue}</td>
           <td>
-            <button data-index="${index}" class="editBtn" data-i18n="edit">編集</button>
-            <button data-index="${index}" class="deleteBtn" data-i18n="delete">削除</button>
+            <button data-index="${index}" class="editBtn" data-i18n="edit">Edit</button>
+            <button data-index="${index}" class="deleteBtn" data-i18n="delete">Delete</button>
           </td>
         `;
         tagsTableBody.appendChild(row);
@@ -133,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.deleteBtn').forEach(button => {
         button.addEventListener('click', () => {
           deleteTag(button.getAttribute('data-index'));
+          loadLanguage(language);
         });
       });
     }
