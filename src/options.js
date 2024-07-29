@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addTagBtn = document.getElementById('addTagBtn');
     const tagForm = document.getElementById('tagForm');
     const editTagForm = document.getElementById('editTagForm');
-    const tagsTableBody = document.querySelector('#tagsTable tbody');
+    const tagsTableBody = document.querySelector('#tagoozen-tags-table tbody');
   
     document.getElementById('languageSelector');
   
@@ -127,24 +127,22 @@ document.addEventListener('DOMContentLoaded', () => {
           <td>${tag.matchType}</td>
           <td>${tag.domainValue}</td>
           <td>
-            <button data-index="${index}" class="editBtn" data-i18n="edit">Edit</button>
-            <button data-index="${index}" class="deleteBtn" data-i18n="delete">Delete</button>
+            <button class="tagoozen-button" id="editBtn-${index}" data-i18n="edit">Edit</button>
+            <button class="tagoozen-button" id="deleteBtn-${index}" data-i18n="delete">Delete</button>
           </td>
         `;
         tagsTableBody.appendChild(row);
       });
+
       function triggerEditForm(index) {
-        const tag = tags[index];  // Assuming `tags` is an array of tag objects
+        const tag = tags[index];
         openEditForm(tag, index);
       }
-
-      document.querySelectorAll('.editBtn').forEach((button, index) => {
-        button.addEventListener('click', () => triggerEditForm(index));
-      });
-
-      document.querySelectorAll('.deleteBtn').forEach(button => {
-        button.addEventListener('click', () => {
-          deleteTag(button.getAttribute('data-index'));
+    
+      tags.forEach((tag, index) => {
+        document.getElementById(`editBtn-${index}`).addEventListener('click', () => triggerEditForm(index));
+        document.getElementById(`deleteBtn-${index}`).addEventListener('click', () => {
+          deleteTag(index);
           loadLanguage(language);
         });
       });

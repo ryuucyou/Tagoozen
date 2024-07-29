@@ -16,8 +16,8 @@
     </select>
   </div>
   <div id="tableContainer">
-    <button id="addTagBtn" data-i18n="addTag">Add New Tag</button>
-    <table id="tagsTable">
+    <button class="tagoozen-button" id="addTagBtn" data-i18n="addTag">Add New Tag</button>
+    <table id="tagoozen-tags-table">
       <thead>
         <tr>
           <th data-i18n="tagName">Text</th>
@@ -37,7 +37,7 @@
   </div>
   
   <!-- 新規フォーム -->
-  <div id="tagForm" style="display: none;">
+  <div class="tagoozen-form" id="tagForm" style="display: none;">
     <div class="form">
       <h2 data-i18n="addTag">Add New Tag</h2>
       <form id="newTagForm">
@@ -92,16 +92,16 @@
         </div>
   
         <div>
-          <button type="submit" data-i18n="save">Save</button>
-          <button type="button" id="cancelBtn"data-i18n="cancel">Cancel</button>
+          <button class="tagoozen-button" type="submit" data-i18n="save">Save</button>
+          <button class="tagoozen-button" type="button" id="cancelBtn"data-i18n="cancel">Cancel</button>
         </div>
       </form>
     </div>
   </div>
 
   <!-- 編集フォーム -->
-  <div class="form" id="editTagForm" style="display: none;">
-    <div class="form">
+  <div id="editTagForm" style="display: none;">
+    <div  class="tagoozen-form">
       <h2 data-i18n="edit">Edit Tag</h2>
       <form id="editTagFormElement">
         <div>
@@ -154,8 +154,8 @@
         </div>
 
         <div>
-          <button type="button" id="saveEditTagBtn" data-i18n="save">Save</button>
-          <button type="button" id="cancelEditTagBtn" data-i18n="cancel">Cancel</button>
+          <button class="tagoozen-button" type="button" id="saveEditTagBtn" data-i18n="save">Save</button>
+          <button class="tagoozen-button" type="button" id="cancelEditTagBtn" data-i18n="cancel">Cancel</button>
         </div>
       </form>
     </div>

@@ -27,7 +27,7 @@ body {
     background-color: #c1bdea;
   }
 
-  button {
+  .tagoozen-button {
     background-color: #9a92e8; 
     border: none;
     color: white;
@@ -41,11 +41,11 @@ body {
     transition: background-color 0.3s ease;
   }
 
-  button:hover {
+  .tagoozen-button:hover {
     background-color: #45a049; 
   }
 
-  button#addTagBtn {
+  #addTagBtn {
     position: absolute;
     text-align: right;
     right: 11%;
@@ -57,26 +57,26 @@ body {
   }
 
   /*　テーブル　*/
-  table {
+  #tagoozen-tags-table {
     width: 80%;
     border-collapse: collapse;
     margin: 70px auto 0;
   }
   
-  table, th, td {
+  #tagoozen-tags-table th, 
+  #tagoozen-tags-table td {
     border: 0.5px solid #ddd;
   }
   
-  th, td {
+  #tagoozen-tags-table th {
     padding: 8px;
-    text-align: left;
+    text-align: center;
   }
   
-  thead {
+  #tagoozen-tags-table thead {
     background-color: #7771bc; 
     color: white;
   }
-
 
   /* タグの形 */
   .marker {
@@ -86,32 +86,32 @@ body {
     justify-content: center;
     font-size: 28px;
     font-weight: bold;
-    z-index: 1000;
+    z-index: 99999;
   }
   
   .marker.triangle-left {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     top: 0;
     left: 0;
     clip-path: polygon(0 0, 0% 100%, 100% 0);
   }
 
   .marker.triangle-left span {
-    padding-top: 20px;
+    padding-top: 20%;
     display: inline-block;
     transform: rotate(-45deg);
   }
   
   .marker.triangle-right {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     top: 0;
     right: 0;
     clip-path: polygon(0% 0%, 100% 0,100% 100%);
   }
   .marker.triangle-right span {
-    padding-top: 20px;
+    padding-top: 20%;
     display: inline-block;
     transform: rotate(45deg);
   }
@@ -185,24 +185,24 @@ body {
   }
 
   /*フォーム*/
-  .form {
+  .tagoozen-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 80%;
+    width: 78%;
     margin: 20px auto;
     background-color: #f9f9f9;
   }
-  .form h2 {
+  .tagoozen-form h2 {
     margin-bottom: 20px;
   }
 
-  .form input[type="text"],
-  .form input[type="color"],
-  .form select {
+  .tagoozen-form input[type="text"],
+  .tagoozen-form input[type="color"],
+  .tagoozen-form select {
     width: 100%;
     padding: 8px;
     margin-bottom: 12px;
@@ -211,12 +211,12 @@ body {
     box-sizing: border-box;
   }
 
-  input[type="color"] {
+  .tagoozen-form input[type="color"] {
     height: 3em;
   }
   
   /* POPUP */
-  .popup-container h1 {
+  .tagoozen-popup-container h1 {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
