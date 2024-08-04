@@ -1,39 +1,38 @@
 {
-    "manifest_version": 3,
-    "name": "Tagoozen",
-    "version": "1.0",
-    "description": "A Chrome extension to mark and differentiate environments.",
-    "permissions": [
-        "storage",
-        "activeTab",
-        "tabs"
-    ],
-    "background": {
-      "service_worker": "src/background.js"
-    },
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "assets/icon.png"
-      }
-    },
-    "options_page": "options.html",
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["src/content.js"],
-        "css": ["src/styles.css"]
-      }
-    ],
-    "web_accessible_resources": [
-      {
-        "resources": ["src/defaultTags.json"],
-        "matches": ["<all_urls>"]
-      }
-    ],
-    "icons": {
-      "16": "assets/icon.png",
-      "48": "assets/icon.png",
-      "128": "assets/icon.png"
+  "manifest_version": 3,
+  "name": "Tagoozen",
+  "version": "1.0",
+  "description": "A Chrome extension to mark and differentiate environments.",
+  "permissions": [
+      "storage",
+      "activeTab",
+      "tabs"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "assets/icon.png"
     }
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "css": ["src/styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/defaultTags.json"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
   }
+}

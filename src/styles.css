@@ -3,7 +3,7 @@ body {
     font-size: 16px;
 }
   
-  h1 {
+  .tagoozen-h1 {
     text-align: center;
   }
 
@@ -223,11 +223,4 @@ body {
 
   .tagoozen-form input[type="color"] {
     height: 3em;
-  }
-  
-  /* POPUP */
-  .tagoozen-popup-container h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
   }
