@@ -92,7 +92,7 @@ chrome.storage.local.get({ tags: [] }, function(result) {
   });
 });
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((request) => {
   if (request.command === "toggle-tag-visibility") {
     tagsVisible = !tagsVisible;
     document.querySelectorAll('.marker').forEach(marker => {
