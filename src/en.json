@@ -1,6 +1,7 @@
 {
     "title": "Tagoozen Options",
     "language":"Language",
+    "shortcut":"Shortcut to toggle tag visibility: Ctrl + Shift + Y (Command + Shift + Y on Mac)",
     "addTag": "Add New Tag",
     "tagName": "Tag Text",
     "backgroundColor": "Background Color",

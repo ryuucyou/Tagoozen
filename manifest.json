@@ -24,6 +24,14 @@
       "css": ["src/styles.css"]
     }
   ],
+  "commands": {
+    "toggle-tag-visibility": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Toggle the tags visibility"
+    }
+  },
   "web_accessible_resources": [
     {
       "resources": ["src/defaultTags.json"],

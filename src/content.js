@@ -1,3 +1,4 @@
+let tagsVisible = true;
 chrome.storage.local.get({ tags: [] }, function(result) {
   const tags = result.tags || [];
   const currentURL = window.location.hostname;
@@ -89,4 +90,13 @@ chrome.storage.local.get({ tags: [] }, function(result) {
       });
     }
   });
+});
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.command === "toggle-tag-visibility") {
+    tagsVisible = !tagsVisible;
+    document.querySelectorAll('.marker').forEach(marker => {
+      marker.style.visibility = tagsVisible ? 'visible' : 'hidden';
+    });
+  }
 });

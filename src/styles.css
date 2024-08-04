@@ -27,6 +27,12 @@ body {
     background-color: #c1bdea;
   }
 
+  #tag-shortcut-key p {
+    color: #a59df6;
+    text-align: center;
+    padding: 5px;
+  }
+
   .tagoozen-button {
     background-color: #9a92e8; 
     border: none;
@@ -87,6 +93,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     z-index: 99999;
+    visibility: visible;
   }
   
   .marker.triangle-left {

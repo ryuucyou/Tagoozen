@@ -1,6 +1,7 @@
 {
     "title": "Tagoozen オプション",
     "language":"言語",
+    "shortcut":"タグの表示・非表示を切り替えるショートカットキー：Ctrl + Shift + Y（Command + Shift + Y）",
     "addTag": "新規追加",
     "tagName": "表示文言",
     "backgroundColor": "背景色",
