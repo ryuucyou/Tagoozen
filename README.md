@@ -7,12 +7,10 @@ Tagoozenは、開発環境と本番環境を区別するためのChrome拡張機
    - タグの形状、背景色、文字色、位置が設定できる
 - タグをクリックすることで、位置を変えることができる(邪魔にならないように)
 - ショートカットキーで表示・非表示にする
-
-![image](https://github.com/user-attachments/assets/506813ad-ad4e-4bad-b6a0-a435d82ff833)
-![image](https://github.com/user-attachments/assets/eb392cc5-57b5-4d19-a9e8-932e922115a2)
-![image](https://github.com/user-attachments/assets/7391eb9d-c55f-4749-9419-893405b2a751)
-![image](https://github.com/user-attachments/assets/8b19ed38-12df-4e6a-823c-f914943c7618)
-
+<img width="1352" alt="image" src="https://github.com/user-attachments/assets/20e89fd1-901c-419b-9791-772251c41bc1">
+<img width="1352" alt="image" src="https://github.com/user-attachments/assets/d709ceb5-894b-4a18-b3c5-641de105bb7f">
+<img width="1344" alt="image" src="https://github.com/user-attachments/assets/0b67f937-3120-4fb4-963b-3a6ef7ccd22c">
+<img width="1347" alt="image" src="https://github.com/user-attachments/assets/5f26e2cf-1ea9-439a-8393-d86ef76636d6">
 
 ## インストール方法
 
