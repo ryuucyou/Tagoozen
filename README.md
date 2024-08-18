@@ -25,5 +25,5 @@ Tagoozenは、開発環境と本番環境を区別するためのChrome拡張機
 
 1. オプションページでタグを設定します。
 2. 設定されたタグは、指定されたドメインのページに表示されます。
-   
+<img width="1349" alt="image" src="https://github.com/user-attachments/assets/de21bc46-e55e-4dda-92d8-b0b068501b17">
 
