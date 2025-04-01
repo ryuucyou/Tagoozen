@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <td style="color: ${tag.textColor};background-color: ${tag.shape !== 'watermark' ? tag.backgroundColor : 'transparent'};">${tag.textColor}</td>
           <td>${tag.matchType}</td>
           <td>${tag.domainValue}</td>
-          <td>
+          <td class="tagoozen-button_groups">
             <button class="tagoozen-button" id="editBtn-${index}" data-i18n="edit">Edit</button>
             <button class="tagoozen-button" id="deleteBtn-${index}" data-i18n="delete">Delete</button>
           </td>

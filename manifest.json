@@ -5,8 +5,7 @@
   "description": "A Chrome extension to mark and differentiate environments.",
   "permissions": [
       "storage",
-      "activeTab",
-      "tabs"
+      "activeTab"
   ],
   "background": {
     "service_worker": "src/background.js"
@@ -20,8 +19,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["src/content.js"],
-      "css": ["src/styles.css"]
+      "js": ["src/content.js"]
     }
   ],
   "commands": {
