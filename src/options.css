@@ -1,0 +1,294 @@
+.tagoozen-page {
+  font-family: 'Inter', sans-serif;
+  background: #f4f6fb;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+  
+.tagoozen-h1 {
+  font-size: 2rem;
+  color: #5a4fcf;
+  text-align: center;
+}
+.tagoozen-p {
+  color: #5a4fcf;
+  text-align: center;
+}
+.tagoozen-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.tagoozen-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(90, 79, 207, 0.1);
+}
+
+.tagoozen-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  max-height: 550px;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  z-index: 9999;
+  display: none;
+}
+
+.tagoozen-button {
+  background: linear-gradient(135deg, #8e80ff, #6e6be9);
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 80px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.tagoozen-button:hover {
+  transform: scale(1.05);
+}
+.tagoozen-button_groups {
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+}
+
+#addTagBtn {
+  position: absolute;
+  text-align: center;
+  right: 11%;
+  width: 140px;
+  background: #45a049;
+}
+
+/*フォーム*/
+#tagForm, #editTagForm {
+  display: none;
+}
+
+.tagoozen-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 90%;
+  margin: 5px auto;
+  background-color: #f9f9f9;
+}
+
+.tagoozen-form h4 {
+  margin-bottom: 14px;
+  color: #583b84;
+}
+
+.tagoozen-form label {
+  width: 150px;
+  margin-bottom: 2px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #583b84;
+}
+
+.tagoozen-form input[type="text"],
+.tagoozen-form input[type="color"],
+.tagoozen-form select {
+  flex: 1;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.tagoozen-form input[type="color"] {
+  height: 3em;
+  flex: 1;
+}
+
+#language {
+  margin-bottom: 20px;
+  right: 100px;
+  text-align: center;
+}
+
+#language label {
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#language select {
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  background-color: #c1bdea;
+}
+
+#tag-shortcut-key p {
+  color: #a59df6;
+  text-align: center;
+  padding: 5px;
+}
+
+#tableContainer {
+  display: flex;
+  margin: auto;
+}
+
+/*　テーブル　*/
+#tagoozen-tags-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: small;
+}
+
+#tagoozen-tags-table th, 
+#tagoozen-tags-table td {
+  border: 0.5px solid #ddd;
+  border-radius: 2px;
+}
+
+#tagoozen-tags-table th {
+  padding: 9px;
+  text-align: center;
+}
+
+#tagoozen-tags-table thead {
+  background-color: #7771bc; 
+  color: white;
+}
+#tagoozen-tags-table th:nth-child(3),
+#tagoozen-tags-table td:nth-child(3) {
+  max-width: 100px;
+}
+#tagoozen-tags-table th:nth-child(8){
+  width: 162px;
+}
+#tagoozen-tags-table td:nth-child(8){
+  max-width: 180px;
+}
+
+
+/* タグの形 */
+.marker {
+  position: fixed;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 99999;
+  visibility: visible;
+}
+
+.marker.triangle-left {
+  width: 300px;
+  height: 300px;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+
+.marker.triangle-left span {
+  padding-top: 20%;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+.marker.triangle-right {
+  width: 300px;
+  height: 300px;
+  top: 0;
+  right: 0;
+  clip-path: polygon(0% 0%, 100% 0,100% 100%);
+}
+.marker.triangle-right span {
+  padding-top: 20%;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.marker.ribbon-left {
+  display: inline-block;
+  padding: 15px 0;
+  left: -110px;
+  top: 70px;
+  width: 460px;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.marker.ribbon-right {
+  padding: 15px 0;
+  right: -110px;
+  top: 70px;
+  width: 460px;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.marker.ribbon-left span, .marker.ribbon-right span {
+  width: 460px;
+  display: inline-block;
+  padding: 12px 0;
+  box-shadow: 0 0 0 2px rgba(251, 250, 250, 0.818);
+  border-top: dashed 2px rgba(255, 255, 255);
+  border-bottom: dashed 2px rgba(255, 255, 255);
+}
+
+.marker.rectangle-top {
+  width: 100%;
+  height: 10%;
+  top: 0;
+  display: grid;
+  place-items: center;
+}
+.marker.rectangle-bottom {
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+}
+
+.marker.watermark {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0.25;
+}
+
+.marker.watermark span {
+  transform: rotate(-45deg);
+  white-space: nowrap;
+  color: inherit;
+  font-size: 5em;
+  user-select: none;
+  content: attr(data-text);
+}
