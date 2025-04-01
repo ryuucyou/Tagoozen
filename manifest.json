@@ -19,7 +19,8 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["src/content.js"]
+      "js": ["src/content.js"],
+      "css": ["src/marker.css"]
     }
   ],
   "commands": {

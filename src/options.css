@@ -163,11 +163,11 @@
 #tagoozen-tags-table td {
   border: 0.5px solid #ddd;
   border-radius: 2px;
+  text-align: center;
 }
 
 #tagoozen-tags-table th {
   padding: 9px;
-  text-align: center;
 }
 
 #tagoozen-tags-table thead {
@@ -183,112 +183,4 @@
 }
 #tagoozen-tags-table td:nth-child(8){
   max-width: 180px;
-}
-
-
-/* タグの形 */
-.marker {
-  position: fixed;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  font-size: 28px;
-  font-weight: bold;
-  z-index: 99999;
-  visibility: visible;
-}
-
-.marker.triangle-left {
-  width: 300px;
-  height: 300px;
-  top: 0;
-  left: 0;
-  clip-path: polygon(0 0, 0% 100%, 100% 0);
-}
-
-.marker.triangle-left span {
-  padding-top: 20%;
-  display: inline-block;
-  transform: rotate(-45deg);
-}
-
-.marker.triangle-right {
-  width: 300px;
-  height: 300px;
-  top: 0;
-  right: 0;
-  clip-path: polygon(0% 0%, 100% 0,100% 100%);
-}
-.marker.triangle-right span {
-  padding-top: 20%;
-  display: inline-block;
-  transform: rotate(45deg);
-}
-
-.marker.ribbon-left {
-  display: inline-block;
-  padding: 15px 0;
-  left: -110px;
-  top: 70px;
-  width: 460px;
-  text-align: center;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.marker.ribbon-right {
-  padding: 15px 0;
-  right: -110px;
-  top: 70px;
-  width: 460px;
-  text-align: center;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.marker.ribbon-left span, .marker.ribbon-right span {
-  width: 460px;
-  display: inline-block;
-  padding: 12px 0;
-  box-shadow: 0 0 0 2px rgba(251, 250, 250, 0.818);
-  border-top: dashed 2px rgba(255, 255, 255);
-  border-bottom: dashed 2px rgba(255, 255, 255);
-}
-
-.marker.rectangle-top {
-  width: 100%;
-  height: 10%;
-  top: 0;
-  display: grid;
-  place-items: center;
-}
-.marker.rectangle-bottom {
-  width: 100%;
-  height: 10%;
-  bottom: 0;
-  display: grid;
-  place-items: center;
-}
-
-.marker.watermark {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  opacity: 0.25;
-}
-
-.marker.watermark span {
-  transform: rotate(-45deg);
-  white-space: nowrap;
-  color: inherit;
-  font-size: 5em;
-  user-select: none;
-  content: attr(data-text);
 }
