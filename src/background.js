@@ -13,3 +13,9 @@ chrome.commands.onCommand.addListener((command) => {
         });
     }
 });
+
+chrome.runtime.onMessage.addListener((request, sender) => {
+    if (request.command === "toggle-tag-visibility") {
+        chrome.tabs.sendMessage(sender.tab.id, { command: "toggle-tag-visibility" });
+    }
+});

@@ -9,18 +9,45 @@
 <body class="tagoozen-page">
   <div class="tagoozen-container">
     <h1 class="tagoozen-h1" data-i18n="title">Tagoozen Options</h1>
-    <div class="tagoozen-card" id="language">
-      <label for="languageSelector" data-i18n="language">Language:</label>
-      <select id="languageSelector">
-        <option value="en">English</option>
-        <option value="ja">日本語</option>
-      </select>
-      <button class="tagoozen-button" id="addTagBtn" data-i18n="addTag">Add New Tag</button>
-      <p class="tagoozen-p " id="tag-shortcut-key" data-i18n="shortcut">
-        タグの表示・非表示を切り替えるショートカットキー：Ctrl + Shift + Y（Command + Shift + Y）
-      </p>
-    </div> 
+    <!-- Language & Shortcut Settings -->
+    <div class="tagoozen-card" id="settingsCard">
+      <div class="settings-group">
+        <label for="languageSelector" data-i18n="language">Language</label>
+        <select id="languageSelector">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+  
+      <div class="settings-group">
+        <div style="display: flex;align-items: center;">
+          <label data-i18n="shortcutInputLabel">Hidden Key</label>
+          <p id="currentShortcutDisplay">Ctrl+Shift+L</p>
+        </div>
+
+        <button class="tagoozen-button" id="editShortcutBtn" data-i18n="edit">Edit</button>
+      </div>
+    </div>
+
+    <!-- Shortcut Modal -->
+    <div id="shortcutModal" class="tagoozen-modal" style="display:none;">
+      <div class="tagoozen-form">
+        <span id="closeShortcutModal" class="modal-close">&times;</span>
+        <h4 data-i18n="shortcutInputLabel">Shortcut Key</h4>
+        <p data-i18n="shortcutNote">
+          Default is Ctrl+Shift+L. Use combinations of Ctrl, Alt, Shift, Command.
+        </p>
+        <input type="text" id="shortcutInput" placeholder="Ctrl+Shift+L" readonly style="cursor:pointer;">
+    
+        <div class="tagoozen-button_groups">
+          <button class="tagoozen-button" id="saveShortcutBtn" data-i18n="save">Save</button>
+          <button class="tagoozen-button" id="clearShortcutBtn" data-i18n="clear">Clear</button>
+        </div>
+      </div>
+    </div>
+  
     <div class="tagoozen-card" id="tableContainer">
+      <button class="tagoozen-button" id="addTagBtn" data-i18n="addTag">Add New Tag</button>
       <table id="tagoozen-tags-table">
         <thead>
           <tr>
@@ -39,6 +66,7 @@
         </tbody>
       </table>  
     </div>
+
     <!-- 新規フォーム -->
     <div id="tagForm" class="tagoozen-modal">
       <div class="tagoozen-form">
