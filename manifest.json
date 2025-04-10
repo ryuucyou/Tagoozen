@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Tagoozen",
-  "version": "1.0",
+  "version": "2.0",
   "description": "A Chrome extension to mark and differentiate environments.",
   "permissions": [
       "storage",
