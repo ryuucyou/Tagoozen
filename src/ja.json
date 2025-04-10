@@ -12,6 +12,7 @@
     "domainValue": "ドメイン値",
     "save": "保存",
     "cancel": "キャンセル",
+    "clear": "クリア",
     "edit": "編集",
     "delete": "削除",
     "editTitle": "タグの編集",
@@ -22,5 +23,7 @@
     "regex":"正規表現",
     "prefix":"頭一致",
     "suffix":"末尾一致",
-    "contains":"含む"
+    "contains":"含む",
+    "shortcutInputLabel": "非表示キー",
+    "shortcutNote": "Ctrl、Alt、Shift、Commandと他のキーの組み合わせが使えます。使用したいキーをキーボードで押してください。"
 }

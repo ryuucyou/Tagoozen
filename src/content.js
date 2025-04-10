@@ -100,3 +100,38 @@ chrome.runtime.onMessage.addListener((request) => {
     });
   }
 });
+
+chrome.storage.local.get('userShortcut', ({ userShortcut }) => {
+  const defaultShortcut = {
+    ctrlKey: true,
+    altKey: true,
+    metaKey: false,
+    shiftKey: false,
+    key: ' '
+  };
+
+  const parseShortcut = (shortcut) => {
+    const parts = shortcut.split('+');
+    return {
+      ctrlKey: parts.includes('Ctrl'),
+      altKey: parts.includes('Alt'),
+      metaKey: parts.includes('Command'),
+      shiftKey: parts.includes('Shift'),
+      key: parts.find(k => !['Ctrl', 'Alt', 'Shift', 'Command'].includes(k))?.toLowerCase() || ''
+    };
+  };
+
+  const activeShortcut = userShortcut ? parseShortcut(userShortcut) : defaultShortcut;
+
+  window.addEventListener('keydown', (event) => {
+    if (
+      event.ctrlKey === activeShortcut.ctrlKey &&
+      event.altKey === activeShortcut.altKey &&
+      event.metaKey === activeShortcut.metaKey &&
+      event.shiftKey === activeShortcut.shiftKey &&
+      event.key.toLowerCase() === activeShortcut.key
+    ) {
+      chrome.runtime.sendMessage({ command: "toggle-tag-visibility" });
+    }
+  });
+});

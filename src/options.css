@@ -26,6 +26,7 @@
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 8px 16px rgba(90, 79, 207, 0.1);
+  margin-bottom: 20px;
 }
 
 .tagoozen-modal {
@@ -41,6 +42,20 @@
   padding: 8px;
   z-index: 9999;
   display: none;
+}
+.modal-close {
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #000;
 }
 
 .tagoozen-button {
@@ -68,7 +83,6 @@
 #addTagBtn {
   position: absolute;
   text-align: center;
-  right: 11%;
   width: 140px;
   background: #45a049;
 }
@@ -120,19 +134,33 @@
   flex: 1;
 }
 
-#language {
-  margin-bottom: 20px;
-  right: 100px;
-  text-align: center;
+.settings-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 400px;
 }
 
-#language label {
+.settings-group button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+}
+
+#settingsCard {
+  padding: 30px 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+#settingsCard label {
   font-size: 18px;
-  margin-right: 10px;
+  margin-right: 5px;
   font-weight: bold;
 }
 
-#language select {
+#settingsCard select {
   font-size: 16px;
   padding: 5px;
   border: 1px solid #f2f2f2;
@@ -140,7 +168,7 @@
   background-color: #c1bdea;
 }
 
-#tag-shortcut-key p {
+#currentShortcutDisplay {
   color: #a59df6;
   text-align: center;
   padding: 5px;
@@ -155,7 +183,7 @@
 #tagoozen-tags-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0 auto;
+  margin: 50px auto 0;
   font-size: small;
 }
 

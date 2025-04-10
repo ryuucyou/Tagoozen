@@ -12,6 +12,7 @@
     "domainValue": "Domain Value",
     "save": "Save",
     "cancel": "Cancel",
+    "clear": "Clear",
     "edit": "Edit",
     "delete": "Delete",
     "editTitle": "Edit Tag",
@@ -22,5 +23,7 @@
     "regex":"Regex",
     "prefix":"Prefix",
     "suffix":"Suffix",
-    "contains":"Contains"
+    "contains":"Contains",
+    "shortcutInputLabel": "Hidden Key",
+    "shortcutNote": "You can use combinations of Ctrl, Alt, Shift, Command with other keys. Press the keys you want to use on your keyboard."
 }
