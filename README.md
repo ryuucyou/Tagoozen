@@ -13,15 +13,10 @@ Tagoozenは、開発環境と本番環境を区別するためのChrome拡張機
 <img width="1347" alt="image" src="https://github.com/user-attachments/assets/5f26e2cf-1ea9-439a-8393-d86ef76636d6">
 
 ## インストール方法
-
-1. このリポジトリをクローンまたはダウンロードします。
-2. Chromeの拡張機能ページ（`chrome://extensions/`）を開きます。
-3. 「デベロッパーモード」を有効にします。
-4. 「パッケージ化されていない拡張機能を読み込む」をクリックし、クローンまたはダウンロードしたディレクトリを選択します。
+https://chromewebstore.google.com/detail/tagoozen/fbjgkhbmgaphfendeilaikohimacdhoa?hl=ja
 
 ## 使用方法
-
 1. オプションページでタグを設定します。
 2. 設定されたタグは、指定されたドメインのページに表示されます。
-<img width="1349" alt="image" src="https://github.com/user-attachments/assets/de21bc46-e55e-4dda-92d8-b0b068501b17">
+<img width="1349" alt="image" src="https://github.com/user-attachments/assets/69227bc2-c626-47d6-9550-a4fd55d9ffd0">
 
